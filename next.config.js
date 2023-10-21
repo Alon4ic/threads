@@ -10,6 +10,8 @@ const nextConfig = {
 		ignoreDuringBuilds: true,
 	},
 	images: {
+		domains: ['utfs.io', 'example.com', 'another-domain.com'],
+
 		remotePatterns: [
 			{
 				protocol: "https",
@@ -27,8 +29,29 @@ const nextConfig = {
 				protocol: "https",
 				hostname: "placehold.co",
 			},
+			{
+				protocol: 'https',
+				hostname: 'assets.example.com',
+				port: '',
+				pathname: '/account123/**',
+			},
+			
+			
 		],
 	},
 };
 
 module.exports = nextConfig;
+
+// module.exports = {
+// 	images: {
+// 		remotePatterns: [
+// 			{
+// 				protocol: 'https',
+// 				hostname: 'assets.example.com',
+// 				port: '',
+// 				pathname: '/account123/**',
+// 			},
+// 		],
+// 	},
+// }

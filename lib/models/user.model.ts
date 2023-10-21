@@ -4,7 +4,7 @@ const userSchema = new mongoose.Schema({
 	id: { type: String, required: true },
 	username: { type: String, required: true, unique: true },
 	name: { type: String, required: true},
-	img: String,
+	image: String,
 	bio: String,
 	threads: [
 		{

@@ -1,7 +1,7 @@
 import * as z from "zod";
 
 export const UserValidation = z.object({
-	profile_photo: z.string().url().min(1),
+	profile_photo: z.string().url().nonempty(),
 	name: z
 		.string()
 		.min(3, { message: "Minimum 3 characters." })
@@ -15,12 +15,3 @@ export const UserValidation = z.object({
 		.min(3, { message: "Minimum 3 characters." })
 		.max(1000, { message: "Maximum 1000 caracters." }),
 });
-
-// import * as z from 'zod';
-
-// export const UserValidation = z.object({
-// 	profile_photo: z.string().url().min(1),
-// 	name: z.string().min(3).max(30),
-// 	username: z.string().min(3).max(30),
-// 	bio: z.string().min(3).max(1000),
-// })
